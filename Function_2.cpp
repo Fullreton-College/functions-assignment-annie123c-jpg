@@ -38,11 +38,38 @@ int main()
 
 int accept_money()
 {
-  //write your code
+  int total = 0;
+  string coin;
+
+  while (total < TWINKIE_PRICE)
+  {
+    cout << "Insert a coin (dollar, quarter, dime, nickel): ";
+    cin >> coin;
+
+    if (coin == "dollar")
+    {
+      total += 100;
+    }
+    else if (coin == "quarter")
+    {
+      total += 25;
+    }
+    else if (coin == "dime")
+    {
+      total += 10;
+    }
+    else if (coin == "nickel")
+    {
+      total += 5;
+    }
+
+    cout << "Total Inserted: $" << total/100.0 << endl;
+  }
+  return total;
 }
 
 int compute_change(int total_paid) 
 {
-//write your code
+  return total_paid - TWINKIE_PRICE;
 }
 
